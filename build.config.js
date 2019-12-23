@@ -24,7 +24,7 @@ module.exports = {
          *
          */
         require: [
-            <%= requires.join(',\n' + ' '.repeat(12)) %>
+            <%- requires.join(',\n' + ' '.repeat(12)) %>
         ]
     },
 
