@@ -40,7 +40,7 @@ module.exports = {
     //第三方框架
     vendor: {
         js: [
-            <%= vendors.join(',\n') %>
+            <%- vendors.join(',\n' + ' '.repeat(12)) %>
         ],
         css: [
         ]
