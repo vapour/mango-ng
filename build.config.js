@@ -24,14 +24,7 @@ module.exports = {
          *
          */
         require: [
-            <% requires.forEach(function (mod, index) {
-                if (index !== requires.length - 1) {
-                    %>
-            '<%= mod %>',
-            <% } else { %>
-            '<%= mod %>'
-            <% }
-            }) %>
+            <%= requires.join(',\n') %>
         ]
     },
 
@@ -47,15 +40,7 @@ module.exports = {
     //第三方框架
     vendor: {
         js: [
-            <% 
-            vendors.forEach(function (src, index) {
-                if (index !== vendors.length - 1) {
-            %>
-            '<%= src %>',
-            <% } else { %>
-            '<%= src %>'
-            <% }
-            }) %>
+            <%= vendors.join(',\n') %>
         ],
         css: [
         ]
