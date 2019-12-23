@@ -24,12 +24,12 @@ module.exports = {
          *
          */
         require: [
-            <% modules.forEach(function (item, index) {
-                if (index !== modules.length - 1) {
+            <% requires.forEach(function (mod, index) {
+                if (index !== requires.length - 1) {
                     %>
-            '<%= item.name %>@<%= item.version %>',
+            '<%= mod %>',
             <% } else { %>
-            '<%= item.name %>@<%= item.version %>'
+            '<%= mod %>'
             <% }
             }) %>
         ]
@@ -48,8 +48,8 @@ module.exports = {
     vendor: {
         js: [
             <% 
-            vendor.forEach(function (src, index) {
-                if (index !== modules.length - 1) {
+            vendors.forEach(function (src, index) {
+                if (index !== vendors.length - 1) {
             %>
             '<%= src %>',
             <% } else { %>
