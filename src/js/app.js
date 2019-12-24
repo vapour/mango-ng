@@ -17,6 +17,14 @@ angular.module('erp.wish.fbworder', ['mg.bootstrap.dropdown', 'mg.bootstrap.dial
             method: 'post'
         });
         <% } %>
+        <% if (useSortable) { %>
+        // 产品图片排序配置
+        vm.sortConfig = {
+            draggable: '.has-img',
+            ghostClass: 'sortable',
+            animation: 150
+        };
+        <% } %>
         <% if (useSearch) { %>
         vm.filters = [{
             _selectinput: true,
