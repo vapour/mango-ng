@@ -1,4 +1,4 @@
-angular.module('app.service', ['ngMessages'])
+angular.module('app.service', [])
     .factory('kit', ['$q', 'mgAlert', 'mgWidgetNotify', function ($q, mgAlert, mgWidgetNotify) {
         var exports = {
             notify: function (msg, option) {
@@ -131,16 +131,6 @@ angular.module('app.service', ['ngMessages'])
                 return result;
             }
         };
-        // 通用回调数据处理方法
-        function _handle(response, key) {
-            var res = response.data;
-            if (res.success) {
-                return $q.when(res.data[key]);
-            } else {
-                mgAlert.error(res.msg);
-                return $q.reject();
-            }
-        }
         return exports;
     }])
     ;
