@@ -8,7 +8,7 @@ angular.module('erp.wish.fbworder', ['mg.bootstrap.dropdown', 'mg.bootstrap.dial
         paginationCfgProvider.extraPageSize = [300, 500];
     }])
     <% } %>
-    .controller('rootCtrl', ['$scope', '$http', 'kit'<%- injectServiceName %>, function ($scope, $http, ajaxPage, kit<%- injectServiceVar %>) {
+    .controller('rootCtrl', ['$scope', '$http', 'kit'<%- injectServiceName %>, function ($scope, $http, kit<%- injectServiceVar %>) {
         var vm = this;
         <% if (useAjaxPage) { %>
         //ajax分页
